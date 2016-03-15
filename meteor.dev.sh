@@ -5,7 +5,7 @@ set -u
 sudo apt-get update 
 
 #essential tools
-sudo apt-get install --no-install-recommends -y -q git curl build-essential
+sudo apt-get install --no-install-recommends -y -q git curl build-essential pwgen
 
 #nginx
 sudo apt-get install --no-install-recommends -y -q ca-certificates nginx
@@ -17,17 +17,21 @@ sudo apt-get install -y nodejs
 #meteor
 curl https://install.meteor.com/ | sh
 
-#create workspace
-sudo mkdir /workspace && cd /workspace
-
 #optional: cloud9
-git clone git://github.com/c9/core.git c9sdk
-cd c9sdk
+git clone git://github.com/c9/core.git ~/.c9
+cd ~/.c9
 scripts/install-sdk.sh
 
 #cleaning
 sudo rm -rf /var/lib/apt/lists/*
 
+
+
+export C9_PASS=$(pwgen -1)
+
 #execute
 # curl https://raw.githubusercontent.com/thewolf/devbox/master/meteor.dev.sh | sh
-# node server.js --port 8080 --listen 0.0.0.0 -w /home --packed -b --auth u:pass
+
+npm install forever -g
+cd ~/.c9
+forever node server.js --port 8080 --listen 0.0.0.0 -w /home --packed -b --auth c9:$C9_PASS
