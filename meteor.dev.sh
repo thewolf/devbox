@@ -28,4 +28,6 @@ scripts/install-sdk.sh
 #cleaning
 rm -rf /var/lib/apt/lists/*
 
+#execute
+# curl https://raw.githubusercontent.com/thewolf/devbox/master/meteor.dev.sh | sh
 
