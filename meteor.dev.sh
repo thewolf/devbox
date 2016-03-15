@@ -30,4 +30,4 @@ sudo rm -rf /var/lib/apt/lists/*
 
 #execute
 # curl https://raw.githubusercontent.com/thewolf/devbox/master/meteor.dev.sh | sh
-
+# node server.js --port 8080 --listen 0.0.0.0 -w /home --packed -b --auth u:pass
