@@ -18,7 +18,7 @@ sudo apt-get install -y nodejs
 curl https://install.meteor.com/ | sh
 
 #create workspace
-mkdir /workspace && cd /workspace
+sudo mkdir /workspace && cd /workspace
 
 #optional: cloud9
 git clone git://github.com/c9/core.git c9sdk
@@ -26,7 +26,7 @@ cd c9sdk
 scripts/install-sdk.sh
 
 #cleaning
-rm -rf /var/lib/apt/lists/*
+sudo rm -rf /var/lib/apt/lists/*
 
 #execute
 # curl https://raw.githubusercontent.com/thewolf/devbox/master/meteor.dev.sh | sh
