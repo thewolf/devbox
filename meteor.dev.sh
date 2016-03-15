@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+set -u
 
 sudo apt-get update 
 
