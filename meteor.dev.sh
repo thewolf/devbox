@@ -32,7 +32,7 @@ export C9_PASS=$(pwgen -1)
 #execute
 # curl https://raw.githubusercontent.com/thewolf/devbox/master/meteor.dev.sh | sh
 
-npm install forever -g
+sudo npm install forever -g
 cd ~/.c9
 echo $C9_PASS
 forever start server.js --port 8080 --listen 0.0.0.0 -w /home --packed -b --auth c9:$C9_PASS
