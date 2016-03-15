@@ -5,7 +5,10 @@ set -u
 sudo apt-get update 
 
 #essential tools
-sudo apt-get install --no-install-recommends -y -q git curl build-essential ca-certificates 
+sudo apt-get install --no-install-recommends -y -q git curl build-essential
+
+#nginx
+sudo apt-get install --no-install-recommends -y -q ca-certificates nginx
 
 #nodejs
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - 
@@ -21,4 +24,8 @@ mkdir /workspace && cd /workspace
 git clone git://github.com/c9/core.git c9sdk
 cd c9sdk
 scripts/install-sdk.sh
+
+#cleaning
+rm -rf /var/lib/apt/lists/*
+
 
