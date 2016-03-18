@@ -15,7 +15,7 @@ curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 sudo apt-get install -y nodejs 
 
 #meteor
-curl https://install.meteor.com/ | sh
+#curl https://install.meteor.com/ | sh
 
 #optional: cloud9
 git clone git://github.com/c9/core.git ~/.c9
