@@ -11,7 +11,7 @@ sudo apt-get install --no-install-recommends -y -q git curl build-essential pwge
 sudo apt-get install --no-install-recommends -y -q ca-certificates nginx
 
 #nodejs
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - 
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs 
 
 #meteor
