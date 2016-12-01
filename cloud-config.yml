@@ -1,0 +1,16 @@
+#cloud-config
+rancher:
+  network:
+    interfaces:
+      eth0:
+        dhcp: true
+    http_proxy: http://10.215.41.71:8080
+    https_proxy: http://10.215.41.71:8080
+    no_proxy: localhost,127.0.0.1,10.215.*
+  docker:
+    environment:
+    - HTTP_PROXY=http://10.215.41.71:8080
+    - HTTPS_PROXY=http://10.215.41.71:8080
+    - NO_PROXY=localhost,127.0.0.1,10.215.*
+  ssh_authorized_keys:
+    - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIB+tNbHEliK5IYzlAWa75p9eDOGpsUbag3ZuvvS9xOVu3NpAVZ5TktJnI/cHmYOTvDCatFi/9Wd8ncMTBCTEu8t3D7fBnigBAAPu/mCk4qbxLa3uiLwaMrkYXkJaEaq9fZ64mt2ChDgLOUDayMuyRt4gMtujo9xGxh6ip0EOmBrdQ== rsa-key-20161201
